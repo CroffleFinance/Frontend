@@ -44,31 +44,7 @@ const App: React.FC = () => {
       <ResetCSS />
       <GlobalStyle />
       <Menu>
-        <SuspenseWithChunkError fallback={<PageLoader />}>
-          <Switch>
-            <Route path="/" exact>
-              <Home />
-            </Route>
-            <Route path="/farms">
-              <Farms />
-            </Route>
-            <Route path="/pools">
-              <Pools />
-            </Route>
-            {/* Redirect */}
-            <Route path="/staking">
-              <Redirect to="/pools" />
-            </Route>
-            <Route path="/syrup">
-              <Redirect to="/pools" />
-            </Route>
-            <Route path="/nft">
-              <Redirect to="/collectibles" />
-            </Route>
-            {/* 404 */}
-            <Route component={NotFound} />
-          </Switch>
-        </SuspenseWithChunkError>
+
       </Menu>
       <EasterEgg iterations={2} />
       <ToastListener />
